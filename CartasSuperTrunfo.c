@@ -1,22 +1,105 @@
 #include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+#include <ctype.h>
+#include <string.h>
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Carta 1
+    char estado1[2];
+    char codigo1[4];
+    char cidade1[100];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontos1;
 
-    return 0;
+    // Carta 2
+    char estado2[2];
+    char codigo2[4];
+    char cidade2[100];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontos2;
+
+    // Apresentação do jogo
+    printf("\n");
+    printf("Agora, iniciaremos a criação das suas cartas.\n");
+    printf("Por favor, siga as instruções abaixo.\n");
+    printf("\n");
+
+    // Criando a Carta 1
+    printf("Criação da Carta 1\n");
+    printf("Digite uma letra de 'A' a 'H' para representar um dos oito estados:\n");
+    scanf("%1s", estado1);
+
+    printf("Digite o código da carta (Ex: A01, B03):\n");
+    scanf("%3s", codigo1);
+
+    printf("Escolha o nome da sua cidade:\n");
+    // o [^\n] posibilizar ler nomes com espaco
+    scanf(" %99[^\n]", cidade1); 
+
+    printf("Digite o número de habitantes da sua cidade:\n");
+    scanf("%d", &populacao1);
+
+    printf("Digite a área da cidade em quilômetros quadrados:\n");
+    scanf("%f", &area1);
+
+    printf("Digite o Produto Interno Bruto (PIB) da sua cidade:\n");
+    scanf("%f", &pib1);
+
+    printf("Digite o número de pontos turísticos que a sua cidade possui:\n");
+    scanf("%d", &pontos1);
+    printf("\n");
+
+    printf("Você concluiu a primeira carta do jogo. Agora, iniciaremos a criação da segunda carta.\n");
+    printf("\n");
+
+    // Criando a Carta 2
+    printf("Criação da Carta 2\n");
+    printf("Digite uma letra de 'A' a 'H' para representar um dos oito estados:\n");
+    scanf("%1s", estado2);
+
+    printf("Digite o código da carta (Ex: A01, B03):\n");
+    scanf("%3s", codigo2);
+
+    printf("Escolha o nome da sua cidade:\n");
+    scanf(" %99[^\n]", cidade2);  
+
+    printf("Digite o número de habitantes da sua cidade:\n");
+    scanf("%d", &populacao2);
+
+    printf("Digite a área da cidade em quilômetros quadrados:\n");
+    scanf("%f", &area2);
+
+    printf("Digite o Produto Interno Bruto (PIB) da sua cidade:\n");
+    scanf("%f", &pib2);
+
+    printf("Digite o número de pontos turísticos que a sua cidade possui:\n");
+    scanf("%d", &pontos2);
+
+    printf("\n");
+    printf("Cartas criadas com sucesso! O jogo pode começar.\n");
+
+    // Exibicao das cartas
+    printf("Carta 1 \n");
+    printf("Estado: %s \n", estado1);
+    printf("Codigo da Carta: %s \n", codigo1);
+    printf("Cidade: %s \n", cidade1);
+    printf("População: %d \n", populacao1);
+    printf("Área: %.2f km² \n", area1);
+    printf("PIB: %.2f bilhões de reais \n", pib1);
+    printf("Número de Pontos Turísticos: %d\n", pontos1);
+    printf("\n");
+
+    printf("Carta 2 \n");
+    printf("Estado: %s \n", estado2);
+    printf("Codigo da Carta: %s \n", codigo2);
+    printf("Cidade: %s \n", cidade2);
+    printf("População: %d \n", populacao2);
+    printf("Área: %.2f km² \n", area2);
+    printf("PIB: %.2f bilhões de reais \n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontos2);
+    
+return 0;
 }
