@@ -3,6 +3,9 @@
 #include <string.h>
 
 int main() {
+    //Calculo das Cartas1
+    float densidadep1, densidadep2, pibc1, pibc2;
+
     // Carta 1
     char estado1[2];
     char codigo1[4];
@@ -81,6 +84,12 @@ int main() {
     printf("\n");
     printf("Cartas criadas com sucesso! O jogo pode começar.\n");
 
+    //Calculo das cartas2
+    densidadep1 = (float) populacao1 / area1;
+    densidadep2 = (float)  populacao2 /  area2;
+    pibc1 = pib1 /  populacao1;
+    pibc2 = pib2 / populacao2;
+
     // Exibicao das cartas
     printf("Carta 1 \n");
     printf("Estado: %s \n", estado1);
@@ -90,6 +99,8 @@ int main() {
     printf("Área: %.2f km² \n", area1);
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos1);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidadep1);
+    printf("PIB per Capita: %.2f reais \n", pibc1);
     printf("\n");
 
     printf("Carta 2 \n");
@@ -100,6 +111,9 @@ int main() {
     printf("Área: %.2f km² \n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos2);
-    
+    printf("Densidade Populacional: %.2f hab/km² \n", densidadep2);
+    printf("PIB per Capita: %.2f reais \n", pibc2);
+
+
 return 0;
 }
