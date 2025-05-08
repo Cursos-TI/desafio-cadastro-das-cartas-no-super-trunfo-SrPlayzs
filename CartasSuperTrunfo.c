@@ -7,7 +7,7 @@ int main() {
     float densidadep1, densidadep2, pibc1, pibc2;
 
     // Carta 1
-    char estado1[2];
+    char estado1[3];
     char codigo1[4];
     char cidade1[100];
     int populacao1;
@@ -16,7 +16,7 @@ int main() {
     int pontos1;
 
     // Carta 2
-    char estado2[2];
+    char estado2[3];
     char codigo2[4];
     char cidade2[100];
     int populacao2;
